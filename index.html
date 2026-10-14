@@ -4,7 +4,6 @@
 
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://web.archive.org/web/20250327165800js_/https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
         body {
             background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
@@ -308,8 +307,8 @@
         <a href="#" id="wm-video" title="video">
           <span class="iconochive-movies"></span>
         </a>
-        <a id="wm-share-facebook" href="#" data-url="https://web.archive.org/web/20250327165800/https://chicktv.github.io/tv/" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
-        <a id="wm-share-twitter" href="#" data-url="https://web.archive.org/web/20250327165800/https://chicktv.github.io/tv/" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+        <a id="wm-share-facebook" href="#" data-url="https://chicktv.github.io/tv/" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+        <a id="wm-share-twitter" href="#" data-url="https://chicktv.github.io/tv/" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
       </div>
       <div style="padding-right:2px;text-align:right;white-space:nowrap;">
         <a id="wm-expand" class="wm-btn wm-closed" href="#expand"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span class="xxs" style="font-size:80%;">About this capture</span></a>
@@ -326,7 +325,7 @@
       <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="https://web-static.archive.org/_static/images/loading.gif" alt="loading" /></div>
     </div>
     </div>
-  </div></div></div></div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20250327165800/https://chicktv.github.io/tv/</div>
+  </div></div></div></div><div id="wm-ipp-print">The Wayback Machine - https://chicktv.github.io/tv/</div>
 <script type="text/javascript">//<![CDATA[
 __wm.bt(775,27,25,2,"web","https://chicktv.github.io/tv/","20250327165800",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3","https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv"], false);
   __wm.rw(1);
@@ -373,7 +372,7 @@ __wm.bt(775,27,25,2,"web","https://chicktv.github.io/tv/","20250327165800",1996,
         
         async function loadTwitchCredentials() {
             try {
-                const response = await fetch('https://web.archive.org/web/20250327165800/https://chicktv.github.io/tv/token.txt');
+                const response = await fetch('https://chicktv.github.io/tv/token.txt');
                 const data = await response.text();
                 const lines = data.split('\n').map(line => line.trim());
 
@@ -393,7 +392,7 @@ __wm.bt(775,27,25,2,"web","https://chicktv.github.io/tv/","20250327165800",1996,
 
         async function loadChannelsFromUrl() {
             try {
-                const response = await fetch('https://web.archive.org/web/20250327165800/https://chicktv.github.io/tv/channels.txt');
+                const response = await fetch('https://chicktv.github.io/tv/channels.txt');
                 const data = await response.text();
                 const channelLines = data.split('\n');
 
@@ -522,11 +521,11 @@ __wm.bt(775,27,25,2,"web","https://chicktv.github.io/tv/","20250327165800",1996,
 
         function getStreamUrl(channel) {
             if (channel.platform === "kick") {
-                return `https://web.archive.org/web/20250327165800/https://player.kick.com/${channel.id}`;
+                return `https://player.kick.com/${channel.id}`;
             } else if (channel.platform === "twitch") {
-                return `https://web.archive.org/web/20250327165800/https://player.twitch.tv/?channel=${channel.id}&parent=chicktv.github.io`;
+                return `https://player.twitch.tv/?channel=${channel.id}&parent=chicktv.github.io`;
             } else if (channel.platform === "ok") {
-                return `https://web.archive.org/web/20250327165800/https://ok.ru/videoembed/${channel.id}?nochat=1&autoplay=1`;
+                return `https://ok.ru/videoembed/${channel.id}?nochat=1&autoplay=1`;
             }
         }
 
@@ -578,9 +577,9 @@ __wm.bt(775,27,25,2,"web","https://chicktv.github.io/tv/","20250327165800",1996,
 
         function getPlatformUrl(channel) {
             if (channel.platform === "kick") {
-                return `https://web.archive.org/web/20250327165800/https://kick.com/api/v2/channels/${channel.id}`;
+                return `https://kick.com/api/v2/channels/${channel.id}`;
             } else if (channel.platform === "twitch") {
-                return `https://web.archive.org/web/20250327165800/https://api.twitch.tv/helix/streams?user_login=${channel.id}`;
+                return `https://api.twitch.tv/helix/streams?user_login=${channel.id}`;
             } else {
                 return "";
             }
